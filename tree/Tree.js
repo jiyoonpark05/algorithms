@@ -28,6 +28,7 @@ class Tree {
     return newNode;
   }
 
+  // [L > Root > R] : 4 > 2 > 5 > 1 > 3
   inorder(node) {
     if (node != null) {
       this.inorder(node.left);
@@ -35,7 +36,7 @@ class Tree {
       this.inorder(node.right);
     }
   }
-
+  // [Root > L > R] : 1 > 2 > 4 > 5 > 3
   preorder(node) {
     if (node !== null) {
       console.log(node.data);
@@ -44,6 +45,7 @@ class Tree {
     }
   }
 
+  // [L > R > Root] : 4 > 5 > 2 > 3 > 1
   postOrder(node) {
     if (node !== null) {
       this.postOrder(node.left);
