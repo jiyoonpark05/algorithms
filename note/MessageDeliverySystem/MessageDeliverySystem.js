@@ -1,4 +1,4 @@
-function solution({ timestamps, messages, k }) {
+function messageDeliverySystem({ timestamps, messages, k }) {
   const answer = [];
   const prevArrival = new Map();
 
@@ -15,20 +15,7 @@ function solution({ timestamps, messages, k }) {
     prevArrival.set(text, arrivalTime);
     answer.push(flag.toString());
   }
-  console.log(answer);
   return answer;
 }
 
-function main() {
-  const testCase = [
-    {
-      timestamps: [1, 4, 5, 10, 11, 14],
-      messages: ["hello", "bye", "bye", "hello", "bye", "hello"],
-      k: 5,
-    },
-  ];
-
-  solution(testCase[0]);
-}
-
-main();
+module.exports = messageDeliverySystem;
